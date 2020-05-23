@@ -2,7 +2,7 @@
 url: "https://williamcanin.me"
 # the subpath of your site, e.g. /blog
 baseurl: 
-remote_theme:williamcanin/typing-jekyll-template
+remote_theme : williamcanin/typing-jekyll-template
 # Plugins de player - Jektify
 jektify:
   enable: true
