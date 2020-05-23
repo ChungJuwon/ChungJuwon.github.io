@@ -1,119 +1,65 @@
-# the base hostname & protocol for your site, e.g. http://example.com
-url: "https://williamcanin.me"
-# the subpath of your site, e.g. /blog
-baseurl: 
-remote_theme : williamcanin/typing-jekyll-template
-# Plugins de player - Jektify
-jektify:
-  enable: true
-  open: true
-  toggle:
-    enable: true
-  spotify:
-    user: # "you_user_spotify"
-    text: "See me no Spotify"
-  sass:
-    jekyll: true
-    other:
-      dir: "way/to/your/SASS"
-  title:
-    enable: false
-    text: "Music name"
-  description:
-    enable: false
-    text: |
-      Jekyll plugin to generate html snippets for embedding Spotify Musics.
-      To listen to the full song, open your Spotify and start these musics.
+# Developer's Note: This is a sample _config.yml file offered with
+# jekyll-theme-prologue for your convenience. To use it, move it to your
+# project's root directory. Please note that the following lines are
+# NECESSARY for Prologue to work correctly:
+#
+# theme: jekyll-theme-prologue
+# collections: [sections]
+#
+# They activate the theme and tell Jekyll to find your homepage content
+# in /_sections. Note where "sections" starts with an underscore
+# and where it doesn't. The social settings will make links to
+# Twitter, etc., but only if you give the URL.
+#
+# Also, be sure to customize url and baseurl for your site.
+#
+# ---------------------------------------------------------------
+#
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: ChungJuwon
+subtitle: SKKU OSS
+description: >- # this means to ignore newlines until "baseurl:"
+  This is the demo site for a Jekyll theme version of
+  HTML5 UP's sleek, responsive site template Prologue.
+author: Your Incredible Name
+email: your-email@example.com
+avatar: assets/images/avatar.jpg
 
-# Attention! Do not change the information below as it is 
-# for development unless you know what you are doing.
+# You'll want to customize url and baseurl for your own site:
+baseurl:  # the subpath of your site, e.g. /blog
+remote_theme : chrisbobbe/jekyll-theme-prologue
+url: "https://chungjuwon.github.io" # the base hostname & protocol for your site
 
-include: ['_blog','_pages']
+# Social settings
+# Make sure to include the full url including protocol, e.g. https://github.com/chrisbobbe
+twitter_url:
+facebook_url:
+googleplus_url:
+instagram_url:
+linkedin_url:
+github_url:
+stackoverflow_url:
+pinterest_url:
+slack_url:
+dribbble_url:
 
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  syntax_highlighter: rouge
+# Google Analytics Tracking ID goes here:
+google_analytics:
 
-permalink: /blog/:title/
-
-layouts_dir: _src/_layouts
-includes_dir: _src/_includes
-plugins_dir: _src/_plugins
-
-destination: public
-port: 4000
-host: localhost
-
-sass:
-  load_paths:
-  - _src/_sass
-  - node_modules
-  - vendor/node_modules
-  style: compressed
-
-feed:
-  path: feed.xml
-
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
-
-tag_page_layout: tag
-tag_page_dir: blog/tags
-tag_permalink_style: pretty
-
-imager:
-  dir_posts: "assets/images/posts"
-
-# Readingtime and Datelang
-## supported languages:
-### ch_CH - Chinese | de_DE - Deutschland | en_US - English
-### es_ES - Spanish | fr_FR - French | it_IT - Italian
-### ja_JP - Japan | pt_PT - Portuguese | ru_RU - Russian
-reading_time:
-  locale: en_US
-
-datelang:
-  locale: en_US
-  reload: true
-
-pagination:
-  enabled: true
-  debug: false
-  collection: 'posts'
-  sort_field: 'date'
-  sort_reverse: true
-  per_page: 5
-  permalink: '/:num/'
-  locale: ''
-  title: ':title - Page :num'
-  limit: 0
-  extension: html
-  indexpage: 'index'
-
-gist:
-  noscript: false
-
-exclude:
-  - temp
-  - .hidden
-  - node_modules
-  - _src
-  - vendor
-  - Gemfile
-  - Gemfile.lock
-  - screenshot.png
-  - CHANGELOG
-  - COPYING
-  - package-lock.json
-  - package.json
-  - README.md
-  - README-ptbr.md
-  - gulpfile.js
-  - Rakefile
-  - yarn.lock
-  - Makefile
+# The following settings are NECESSARY for the Prologue theme to run:
+theme: jekyll-theme-prologue
+collections: [sections]
