@@ -13,7 +13,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: Chung Juwon
-  tagline: SKKU Student
+  tagline: 2019312351
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
