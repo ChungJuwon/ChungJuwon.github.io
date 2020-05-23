@@ -1,44 +1,119 @@
-title: Texture Theme
-author: GitHub User
-email: your-email@domain.com
-description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-show_excerpts: true # set to true to show excerpts on the homepage
-baseurl:
-remote_theme : thelehhman/texture
+# the base hostname & protocol for your site, e.g. http://example.com
+url: "https://williamcanin.me"
+# the subpath of your site, e.g. /blog
+baseurl: 
+remote_theme:ChungJuwon/typing-jekyll-template
+# Plugins de player - Jektify
+jektify:
+  enable: true
+  open: true
+  toggle:
+    enable: true
+  spotify:
+    user: # "you_user_spotify"
+    text: "See me no Spotify"
+  sass:
+    jekyll: true
+    other:
+      dir: "way/to/your/SASS"
+  title:
+    enable: false
+    text: "Music name"
+  description:
+    enable: false
+    text: |
+      Jekyll plugin to generate html snippets for embedding Spotify Musics.
+      To listen to the full song, open your Spotify and start these musics.
 
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+
+# Attention! Do not change the information below as it is 
+# for development unless you know what you are doing.
+
+include: ['_blog','_pages']
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+permalink: /blog/:title/
+
+layouts_dir: _src/_layouts
+includes_dir: _src/_includes
+plugins_dir: _src/_plugins
+
+destination: public
+port: 4000
+host: localhost
+
 sass:
-  sass_dir: _sass
+  load_paths:
+  - _src/_sass
+  - node_modules
+  - vendor/node_modules
+  style: compressed
 
-permalink: /posts/:title/
-texture:
-  title: Adam Denisov
-  tagline: Developer. Designer
-  date_format: "%b %-d, %Y"
-  style: black
-  showNav: false
-  showPicker: true
+feed:
+  path: feed.xml
 
-  # generate social links in footer
-  social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
-    rss: rss
- 
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+tag_page_layout: tag
+tag_page_dir: blog/tags
+tag_permalink_style: pretty
 
-# Build settings
-# theme: texture
+imager:
+  dir_posts: "assets/images/posts"
 
-plugins:
-  - jekyll-seo-tag
-#  - jekyll-feed
+# Readingtime and Datelang
+## supported languages:
+### ch_CH - Chinese | de_DE - Deutschland | en_US - English
+### es_ES - Spanish | fr_FR - French | it_IT - Italian
+### ja_JP - Japan | pt_PT - Portuguese | ru_RU - Russian
+reading_time:
+  locale: en_US
+
+datelang:
+  locale: en_US
+  reload: true
+
+pagination:
+  enabled: true
+  debug: false
+  collection: 'posts'
+  sort_field: 'date'
+  sort_reverse: true
+  per_page: 5
+  permalink: '/:num/'
+  locale: ''
+  title: ':title - Page :num'
+  limit: 0
+  extension: html
+  indexpage: 'index'
+
+gist:
+  noscript: false
+
+exclude:
+  - temp
+  - .hidden
+  - node_modules
+  - _src
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - screenshot.png
+  - CHANGELOG
+  - COPYING
+  - package-lock.json
+  - package.json
+  - README.md
+  - README-ptbr.md
+  - gulpfile.js
+  - Rakefile
+  - yarn.lock
+  - Makefile
