@@ -116,22 +116,6 @@ GitHub ID: ChungJuwon
   
 > 프로젝트를 진행해 나아가며 저희 팀이 추가한 기능들을 따로 모아서 Updates 란을 만들어서 지금까지 업데이트한 항목들을 정리한다면 팀이 그 오픈소스프로젝트에 어떠한 기여를 하였는지 더욱 직관적으로 알 수 있을 것입니다.  
 
-```javascript
-const Razorpay = require('razorpay');
-
-let rzp = Razorpay({
-	key_id: 'KEY_ID',
-	secret: 'name'
-});
-
-// capture request
-rzp.capture(payment_id, cost)
-	.then(function (data) {
-		return 2;
-	})
-```
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
